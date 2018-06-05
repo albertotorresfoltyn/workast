@@ -1,7 +1,7 @@
 /** 
  * Get the config and return all models connected properly
  */
-export default (mongoose) => {
+export default async (mongoose) => {
   const fs = require('fs');
   const modules = {};
   // initializes all models and sources them as .model-name
@@ -9,7 +9,7 @@ export default (mongoose) => {
     if (file !== 'index.js') {
       const moduleName = file.split('.')[0];
       const preModule =  require('./' + moduleName);
-      const module = preModule(mongoose);
+      const module = preModule.default(mongoose);
       modules[moduleName] = module;
     }
   });

@@ -1,11 +1,9 @@
 // import mongoose from 'mongoose';
 
 export default (mongoose) => {
-  const UserSchema = new mongoose.Schema({
-    username: String,
-    email: String,
-    bio: String,
-    image: String,
+  const UserSchema = mongoose.Schema({
+    name: String,
+    avatar: String,
     hash: String,
     salt: String
   }, {timestamps: true});

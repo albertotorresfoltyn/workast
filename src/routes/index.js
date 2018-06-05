@@ -15,7 +15,7 @@ var requireFiles = function (directory, AppConfig) {
       if(validFileTypes.indexOf(fileName.split('.').pop()) === -1) return;
 
       // Require the file.
-      require(directory + '/' + fileName)(AppConfig.app);
+      require(directory + '/' + fileName)(AppConfig);
     }
   })
 }
