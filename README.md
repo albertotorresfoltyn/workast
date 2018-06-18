@@ -15,7 +15,7 @@
 ### Considerations ###
 
  - Once you started the project as mentioned it will create it's own mongodb instance, where the objects will be stored 
-(standard port, 27017), hence you dont need to have mongodb installed before.
+(but in the port 27019), hence you dont need to have mongodb installed before.
    The project reads automatically models and routes from the filesystem.
  - `models/index.js` will load all models that you put in the folder models, be advised that the models are not standard mongoose models but functions
  - `handlers/index.js' loads handlers, which will be called from routes (and consider the same that in the last reference, handlers are functions'
