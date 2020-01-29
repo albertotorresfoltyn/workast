@@ -1,9 +1,8 @@
-import MongodbMemoryServer from 'mongodb-memory-server';
 import mongoose from 'mongoose';
 import initModels from '../../models';
 
 export default async (config) => {
-  const mongod = new MongodbMemoryServer({
+  /*const mongod = new MongodbMemoryServer({
       instance: {
         port: config.connection.mongo.port, // by default choose any free port
         dbName: config.connection.mongo.dbName, // by default generate random dbName
@@ -12,8 +11,8 @@ export default async (config) => {
       },
       debug: true
   });
-  const uri = await mongod.getConnectionString();
-  mongoose.connect(uri);
+  const uri = await mongod.getConnectionString();*/
+  mongoose.connect(`mongodb://${config.connection.mongo.dbPath}:${config.connection.mongo.port}/${config.connection.mongo.dbName}`);
   initModels(mongoose);
   let modelNames = mongoose.modelNames();
 

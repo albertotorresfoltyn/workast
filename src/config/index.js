@@ -4,9 +4,9 @@ export default {
 	"corsHeaders": ["Link"],
 	"connection": {
 		"mongo": {
-			"port": '27019',
+			"port": '27017',
 			"dbName": "workast",
-			"dbpath": "./"
+			"dbPath": "localhost"
 		}
 	}
 }
