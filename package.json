@@ -65,7 +65,7 @@
         "mongodb-memory-server": "^1.7.4",
         "mongoose": "^5.1.2",
         "morgan": "^1.9.0",
-        "redis": "^2.8.0",
+        "redis": "^3.1.1",
         "redis-server": "^1.2.0"
     }
 }
